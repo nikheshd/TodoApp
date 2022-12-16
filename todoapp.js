@@ -20,7 +20,7 @@ saveTodoButton.onclick = function() {
     saveTodoButton.textContent = "Saved Succesfully!"
     setTimeout(function () {
         saveTodoButton.textContent = "Save";
-    }, 3000);
+    }, 1500);
 };
 
 function onAddTodo() {
