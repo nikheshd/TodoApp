@@ -16,7 +16,11 @@ let todoList = getTodoListFromLocalStorage();
 let todosCount = todoList.length;
 
 saveTodoButton.onclick = function() {
-  localStorage.setItem("todoList", JSON.stringify(todoList));
+    localStorage.setItem("todoList", JSON.stringify(todoList));
+    saveTodoButton.textContent = "Saved Succesfully!"
+    setTimeout(function () {
+        saveTodoButton.textContent = "Save";
+    }, 3000);
 };
 
 function onAddTodo() {
