@@ -48,6 +48,13 @@ addTodoButton.onclick = function() {
   onAddTodo();
 };
 
+document.getElementById("todoUserInput").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    onAddTodo();
+  }
+});
+
 function onTodoStatusChange(checkboxId, labelId, todoId) {
   let checkboxElement = document.getElementById(checkboxId);
   let labelElement = document.getElementById(labelId);
